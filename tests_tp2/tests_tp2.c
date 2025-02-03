@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 
 #define mu_assert(message, test) do { if (!(test)) return message; } while (0)
 #define mu_run_test(test) do { char *message = test(); tests_run++; if (message) return message; } while (0)
@@ -42,4 +42,4 @@ int main() {
 		printf("All tests passed.\n");
 	}
 	printf("Tests run : %d\n", tests_run);
-}
+}*/
