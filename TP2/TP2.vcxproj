@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c682627c-7c77-486b-8c40-e286309ed6e5}</ProjectGuid>
-    <RootNamespace>TP3</RootNamespace>
+    <ProjectGuid>{dad0c216-c722-4384-a883-44e2efd4ba8e}</ProjectGuid>
+    <RootNamespace>TP2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClCompile Include="fonctions.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="tests_tp2.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />
