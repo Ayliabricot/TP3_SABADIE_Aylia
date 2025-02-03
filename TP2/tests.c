@@ -60,12 +60,30 @@ static char* test_trouverNote_quitter() {
 	mu_assert("Assert failed trouverNote(): Le q ne permet pas de quitter le simulateur de piano\n", retour == 0);
 }
 
+static char* test_libererMemoire() {
+	Note** notes_liberees = creerTableau(12);
+	float frequencies[12] = { 261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392.00, 415.30, 440.00, 466.16, 493.88 };
+	for (int i = 0; i < 12; i++) {
+		notes_liberees[i] = creerNote(frequencies[i], 300);
+	}
+	libererNotes(notes_liberees, 12);
+	Note** test = creerTableau(12);
+	int verifier = 0;
+	for (int i = 0; i < 12; i++) {
+		if (test[i] != notes_liberees[i]) {
+			verifier = 1;
+		}
+	}
+	mu_assert("Assert failed trouverNote(): La memoire n'est pas liberee\n", verifier == 0);
+}
+
 static char* all_tests() {
 	mu_run_test(test_creerTableau);
 	mu_run_test(test_creerNote);
 	mu_run_test(test_trouverNote_enregistree);
 	mu_run_test(test_trouverNote_non_enregistree);
 	mu_run_test(test_trouverNote_quitter);
+	mu_run_test(test_libererMemoire);
 
 	return 0;
 }
