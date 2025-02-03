@@ -9,6 +9,6 @@ typedef struct {
 Note** creerTableau(int nb_notes);
 Note* creerNote(float frequence, int duree);
 int trouverNote(Note** tableau_notes, int touche);
-void librerNotes(Note** tableau_notes, int taille);
+void libererNotes(Note** tableau_notes, int taille);
 
 #endif

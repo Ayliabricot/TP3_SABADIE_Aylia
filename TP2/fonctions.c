@@ -65,7 +65,7 @@ int trouverNote(Note** tableau_notes, int touche) {
 	return 1;
 }
 
-void librerNotes(Note** tableau_notes, int taille) {
+void libererNotes(Note** tableau_notes, int taille) {
 	for (int i = 0; i < taille; i++) {
 		free(tableau_notes[i]);
 		tableau_notes[i] = NULL;

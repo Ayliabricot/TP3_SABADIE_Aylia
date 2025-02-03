@@ -25,5 +25,7 @@ int main() {
 		}
 	}
 
+	libererNotes(tableau_notes, taille);
+
 	return 0;
 }
