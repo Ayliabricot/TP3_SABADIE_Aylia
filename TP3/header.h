@@ -1,5 +1,5 @@
-#define TP3
 #ifndef TP3
+#define TP3
 
 
 #endif
