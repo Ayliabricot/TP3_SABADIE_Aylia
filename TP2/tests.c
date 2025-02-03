@@ -24,8 +24,15 @@ static char* test_creerTableau() {
 	mu_assert("Assert failed creerTableau(): le tableau de notes est mal initialise\n", verifier == 0);
 }
 
+static char* test_creerNote() {
+	Note* note = creerNote(40,5);
+	int verifier = 0;
+	mu_assert("Assert failed creerNote(): la note est mal créée\n", note->frequence == 40 && note->duree==5);
+}
+
 static char* all_tests() {
 	mu_run_test(test_creerTableau);
+	mu_run_test(test_creerNote);
 
 	return 0;
 }
