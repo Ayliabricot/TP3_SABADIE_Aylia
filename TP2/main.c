@@ -19,7 +19,10 @@ int main() {
 
 	printf("Voici votre piano :\na z e r t y u i o p s d\nTapez 'q' pour quitter.");
 	while (continuer==1) {
-		continuer = trouverNote(tableau_notes);
+		if (_kbhit()) {
+			touche = _getch();
+			continuer = trouverNote(tableau_notes, touche);
+		}
 	}
 
 	return 0;

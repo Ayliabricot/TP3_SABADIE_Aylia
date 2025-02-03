@@ -21,48 +21,46 @@ Note* creerNote(float frequence, int duree) {
 	return nouvelle_note;
 }
 
-int trouverNote(Note** tableau_notes) {
-	if (_kbhit()) {
-		switch (_getch()) {
-		case 97:
-			Beep(tableau_notes[0]->frequence, tableau_notes[0]->duree);
-			break;
-		case 122:
-			Beep(tableau_notes[1]->frequence, tableau_notes[1]->duree);
-			break;
-		case 101:
-			Beep(tableau_notes[2]->frequence, tableau_notes[2]->duree);
-			break;
-		case 114:
-			Beep(tableau_notes[3]->frequence, tableau_notes[3]->duree);
-			break;
-		case 116:
-			Beep(tableau_notes[4]->frequence, tableau_notes[4]->duree);
-			break;
-		case 121:
-			Beep(tableau_notes[5]->frequence, tableau_notes[5]->duree);
-			break;
-		case 117:
-			Beep(tableau_notes[6]->frequence, tableau_notes[6]->duree);
-			break;
-		case 105:
-			Beep(tableau_notes[7]->frequence, tableau_notes[7]->duree);
-			break;
-		case 111:
-			Beep(tableau_notes[8]->frequence, tableau_notes[8]->duree);
-			break;
-		case 112:
-			Beep(tableau_notes[9]->frequence, tableau_notes[9]->duree);
-			break;
-		case 115:
-			Beep(tableau_notes[10]->frequence, tableau_notes[10]->duree);
-			break;
-		case 100:
-			Beep(tableau_notes[11]->frequence, tableau_notes[11]->duree);
-			break;
-		case 113:
-			return 0;
-		}
+int trouverNote(Note** tableau_notes, int touche) {
+	switch (touche) {
+	case 97:
+		Beep(tableau_notes[0]->frequence, tableau_notes[0]->duree);
+		break;
+	case 122:
+		Beep(tableau_notes[1]->frequence, tableau_notes[1]->duree);
+		break;
+	case 101:
+		Beep(tableau_notes[2]->frequence, tableau_notes[2]->duree);
+		break;
+	case 114:
+		Beep(tableau_notes[3]->frequence, tableau_notes[3]->duree);
+		break;
+	case 116:
+		Beep(tableau_notes[4]->frequence, tableau_notes[4]->duree);
+		break;
+	case 121:
+		Beep(tableau_notes[5]->frequence, tableau_notes[5]->duree);
+		break;
+	case 117:
+		Beep(tableau_notes[6]->frequence, tableau_notes[6]->duree);
+		break;
+	case 105:
+		Beep(tableau_notes[7]->frequence, tableau_notes[7]->duree);
+		break;
+	case 111:
+		Beep(tableau_notes[8]->frequence, tableau_notes[8]->duree);
+		break;
+	case 112:
+		Beep(tableau_notes[9]->frequence, tableau_notes[9]->duree);
+		break;
+	case 115:
+		Beep(tableau_notes[10]->frequence, tableau_notes[10]->duree);
+		break;
+	case 100:
+		Beep(tableau_notes[11]->frequence, tableau_notes[11]->duree);
+		break;
+	case 113:
+		return 0;
 	}
 	return 1;
 }
