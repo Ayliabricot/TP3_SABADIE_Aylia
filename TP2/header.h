@@ -2,12 +2,13 @@
 #define TP2
 
 typedef struct {
-	int frequence;
+	float frequence;
 	int duree;
 }Note;
 
 Note** creerTableau(int nb_notes);
-Note* creerNote(Note** tableau_notes, int* taille,int frequence, int duree);
-void librerNotes(Note** tableau_notes, int* taille);
+Note* creerNote(float frequence, int duree);
+int trouverNote(Note** tableau_notes);
+void librerNotes(Note** tableau_notes, int taille);
 
 #endif
